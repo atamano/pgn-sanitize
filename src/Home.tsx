@@ -4,19 +4,31 @@ import {
   Button,
   Container,
   Divider,
+  Link,
   TextareaAutosize,
   Toolbar,
   Typography,
 } from "@mui/material";
-import React, {
-  BaseSyntheticEvent,
-  Fragment,
-  useEffect,
-  useState,
-} from "react";
+import React, { BaseSyntheticEvent, useEffect, useState } from "react";
 import CopyToClipboard from "./Copy";
 
 import "./Home.css";
+
+function Footer() {
+  return (
+    <footer>
+      <Box sx={{ p: 2 }}>
+        <Typography variant="body2" color="textSecondary" align="center">
+          {" Open source project "}
+          <Link color="inherit" href="https://github.com/atamano/pgn-sanitize">
+            hosted on github
+          </Link>{" "}
+          {"."}
+        </Typography>
+      </Box>
+    </footer>
+  );
+}
 
 function Home() {
   const [rawPgn, setRawPgn] = useState("");
@@ -119,6 +131,7 @@ function Home() {
           )}
         </Container>
       </section>
+      <Footer />
     </main>
   );
 }
