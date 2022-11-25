@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/pgn-sanitize/static/js/runtime~main.b6493c37.js"
   },
   {
-    "revision": "a0a15d8bec2fd135c0f011d485ca2223",
+    "revision": "31ab4cb43a5d805112f87f3dc51d33a6",
     "url": "/pgn-sanitize/index.html"
   }
 ];
