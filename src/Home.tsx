@@ -10,7 +10,8 @@ import {
   Typography,
 } from "@mui/material";
 import { Stack } from "@mui/system";
-import React, { BaseSyntheticEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Dropzone from "react-dropzone";
 import CopyToClipboard from "./Copy";
 
 function Footer() {
@@ -36,7 +37,7 @@ function Home() {
     setSanitizedPgn(rawPgn.replace(/(\r\n|\n|\r)/gm, " "));
   }, [rawPgn]);
 
-  const onFileUpload = (e: BaseSyntheticEvent) => {
+  const onFileUpload = (file: File) => {
     const reader = new FileReader();
     reader.onload = async (event) => {
       if (!event || !event.target) {
@@ -50,7 +51,7 @@ function Home() {
       const rawText = text as string;
       setRawPgn(rawText);
     };
-    reader.readAsText(e.target.files[0]);
+    reader.readAsText(file);
   };
 
   const onClear = () => {
@@ -81,12 +82,33 @@ function Home() {
             style={{ width: "100%" }}
             value={rawPgn}
           />
-          <Box sx={{ mb: 4 }}>
-            <Button variant="outlined" component="label">
-              Or upload your file
-              <input onChange={onFileUpload} hidden type="file" />
-            </Button>
-          </Box>
+          <Dropzone
+            onDrop={(acceptedFiles) =>
+              !!acceptedFiles.length && onFileUpload(acceptedFiles[0])
+            }
+          >
+            {({ isDragActive, getRootProps, getInputProps }) => (
+              <Box {...getRootProps()} sx={{ mb: 4 }}>
+                <Button
+                  variant={isDragActive ? "contained" : "outlined"}
+                  component="label"
+                >
+                  Or drop your file here
+                  <input
+                    {...getInputProps()}
+                    onChange={(e) =>
+                      e.target &&
+                      e.target.files &&
+                      !!e.target.files.length &&
+                      onFileUpload(e.target.files[0])
+                    }
+                    hidden
+                    type="file"
+                  />
+                </Button>
+              </Box>
+            )}
+          </Dropzone>
           {!!sanitizedPgn && (
             <Stack spacing={4}>
               <Divider />
