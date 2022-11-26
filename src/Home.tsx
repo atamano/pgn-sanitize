@@ -63,7 +63,7 @@ function Home() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            PGN Sanitizer
+            PGN Cleaner
           </Typography>
         </Toolbar>
       </AppBar>
@@ -71,7 +71,7 @@ function Home() {
         <Container maxWidth="md">
           <Box sx={{ my: 4 }}>
             <Typography variant="h5" component="h1" gutterBottom>
-              Sanitize your chessbase PGN
+              Cleanup your chessbase PGN
             </Typography>
           </Box>
           <TextareaAutosize
@@ -114,7 +114,7 @@ function Home() {
               <Divider />
               <Box>
                 <Typography variant="h6" component="h4" gutterBottom>
-                  Sanitized PGN:
+                  Cleaned PGN:
                 </Typography>
                 <CopyToClipboard>
                   {({ copy }) => (
