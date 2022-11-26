@@ -1,13 +1,13 @@
 {
-  "main.css": "/pgn-sanitize/static/css/main.864d0d38.chunk.css",
-  "main.js": "/pgn-sanitize/static/js/main.a6dceb7a.chunk.js",
-  "main.js.map": "/pgn-sanitize/static/js/main.a6dceb7a.chunk.js.map",
-  "static/js/1.481a1687.chunk.js": "/pgn-sanitize/static/js/1.481a1687.chunk.js",
-  "static/js/1.481a1687.chunk.js.map": "/pgn-sanitize/static/js/1.481a1687.chunk.js.map",
+  "main.css": "/pgn-sanitize/static/css/main.6867f6dc.chunk.css",
+  "main.js": "/pgn-sanitize/static/js/main.5406fc82.chunk.js",
+  "main.js.map": "/pgn-sanitize/static/js/main.5406fc82.chunk.js.map",
+  "static/js/1.9f9d57e4.chunk.js": "/pgn-sanitize/static/js/1.9f9d57e4.chunk.js",
+  "static/js/1.9f9d57e4.chunk.js.map": "/pgn-sanitize/static/js/1.9f9d57e4.chunk.js.map",
   "runtime~main.js": "/pgn-sanitize/static/js/runtime~main.b6493c37.js",
   "runtime~main.js.map": "/pgn-sanitize/static/js/runtime~main.b6493c37.js.map",
-  "static/css/main.864d0d38.chunk.css.map": "/pgn-sanitize/static/css/main.864d0d38.chunk.css.map",
+  "static/css/main.6867f6dc.chunk.css.map": "/pgn-sanitize/static/css/main.6867f6dc.chunk.css.map",
   "index.html": "/pgn-sanitize/index.html",
-  "precache-manifest.2293ff79636320c34d44313fd7ed55ec.js": "/pgn-sanitize/precache-manifest.2293ff79636320c34d44313fd7ed55ec.js",
+  "precache-manifest.7540bb0bcbc280ee6efd9da8d8804d11.js": "/pgn-sanitize/precache-manifest.7540bb0bcbc280ee6efd9da8d8804d11.js",
   "service-worker.js": "/pgn-sanitize/service-worker.js"
 }
