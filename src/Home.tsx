@@ -9,10 +9,9 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { Stack } from "@mui/system";
 import React, { BaseSyntheticEvent, useEffect, useState } from "react";
 import CopyToClipboard from "./Copy";
-
-import "./Home.css";
 
 function Footer() {
   return (
@@ -22,8 +21,7 @@ function Footer() {
           {" Open source project "}
           <Link color="inherit" href="https://github.com/atamano/pgn-sanitize">
             hosted on github
-          </Link>{" "}
-          {"."}
+          </Link>
         </Typography>
       </Box>
     </footer>
@@ -60,7 +58,7 @@ function Home() {
   };
 
   return (
-    <main className="Home">
+    <main style={{ textAlign: "center" }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
@@ -71,14 +69,14 @@ function Home() {
       <section>
         <Container maxWidth="md">
           <Box sx={{ my: 4 }}>
-            <Typography variant="h4" component="h1" gutterBottom>
+            <Typography variant="h5" component="h1" gutterBottom>
               Sanitize your chessbase PGN
             </Typography>
           </Box>
           <TextareaAutosize
             onChange={(e) => setRawPgn(e.target.value)}
-            minRows={10}
-            maxRows={20}
+            minRows={15}
+            maxRows={15}
             placeholder="Copy and paste your PGN here"
             style={{ width: "100%" }}
             value={rawPgn}
@@ -90,14 +88,12 @@ function Home() {
             </Button>
           </Box>
           {!!sanitizedPgn && (
-            <Box sx={{ mb: 4 }}>
+            <Stack spacing={4}>
               <Divider />
-              <Box sx={{ my: 4 }}>
-                <Typography variant="h4" component="h1" gutterBottom>
-                  Sanitized PGN
+              <Box>
+                <Typography variant="h6" component="h4" gutterBottom>
+                  Sanitized PGN:
                 </Typography>
-              </Box>
-              <Box sx={{ mb: 4 }}>
                 <CopyToClipboard>
                   {({ copy }) => (
                     <Button
@@ -110,7 +106,7 @@ function Home() {
                   )}
                 </CopyToClipboard>
                 <Button
-                  style={{ marginLeft: 4 }}
+                  sx={{ ml: 1 }}
                   onClick={onClear}
                   color="warning"
                   variant="contained"
@@ -122,12 +118,12 @@ function Home() {
               <TextareaAutosize
                 disabled
                 value={sanitizedPgn}
-                minRows={10}
-                maxRows={20}
+                minRows={15}
+                maxRows={15}
                 placeholder="Result"
                 style={{ width: "100%" }}
               />
-            </Box>
+            </Stack>
           )}
         </Container>
       </section>
