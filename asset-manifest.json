@@ -1,13 +1,13 @@
 {
   "main.css": "/pgn-sanitize/static/css/main.951cdb46.chunk.css",
-  "main.js": "/pgn-sanitize/static/js/main.79033b83.chunk.js",
-  "main.js.map": "/pgn-sanitize/static/js/main.79033b83.chunk.js.map",
+  "main.js": "/pgn-sanitize/static/js/main.fdb826cf.chunk.js",
+  "main.js.map": "/pgn-sanitize/static/js/main.fdb826cf.chunk.js.map",
   "static/js/1.e81e0c1f.chunk.js": "/pgn-sanitize/static/js/1.e81e0c1f.chunk.js",
   "static/js/1.e81e0c1f.chunk.js.map": "/pgn-sanitize/static/js/1.e81e0c1f.chunk.js.map",
   "runtime~main.js": "/pgn-sanitize/static/js/runtime~main.b6493c37.js",
   "runtime~main.js.map": "/pgn-sanitize/static/js/runtime~main.b6493c37.js.map",
   "static/css/main.951cdb46.chunk.css.map": "/pgn-sanitize/static/css/main.951cdb46.chunk.css.map",
   "index.html": "/pgn-sanitize/index.html",
-  "precache-manifest.daa05ce90e4560d1d96f7627d7884163.js": "/pgn-sanitize/precache-manifest.daa05ce90e4560d1d96f7627d7884163.js",
+  "precache-manifest.9e8d88b9526b1530d776fb8f4f17f0fe.js": "/pgn-sanitize/precache-manifest.9e8d88b9526b1530d776fb8f4f17f0fe.js",
   "service-worker.js": "/pgn-sanitize/service-worker.js"
 }
