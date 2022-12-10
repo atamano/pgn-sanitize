@@ -13,6 +13,7 @@ import { Stack } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import Dropzone from "react-dropzone";
 import CopyToClipboard from "./Copy";
+import { sanitizePgn } from "./helper";
 
 function Footer() {
   return (
@@ -34,7 +35,7 @@ function Home() {
   const [sanitizedPgn, setSanitizedPgn] = useState("");
 
   useEffect(() => {
-    setSanitizedPgn(rawPgn.replace(/(\r\n|\n|\r)/gm, " "));
+    setSanitizedPgn(sanitizePgn(rawPgn));
   }, [rawPgn]);
 
   const onFileUpload = (file: File) => {
